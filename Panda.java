@@ -130,7 +130,8 @@ public class Panda extends Actor
             }
             moveDelay = MOVE_SPEED;
         }
-        if (Greenfoot.isKeyDown("a")){
+        String key = Greenfoot.getKey();
+        if ("a".equals(key)){
             PandaWorld world = (PandaWorld) getWorld();
             if (world != null) {
                 int x = getX();
@@ -142,7 +143,8 @@ public class Panda extends Actor
                 }
             }
         }
-        if (Greenfoot.isKeyDown("b")){
+        
+        if ("b".equals(key)){
             PandaWorld world = (PandaWorld) getWorld();
             if (world != null) {
                 int x = getX();
