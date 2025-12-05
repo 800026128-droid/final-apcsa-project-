@@ -1,22 +1,21 @@
 import greenfoot.*;
 
+/**
+ * PurplePanda - Selectable panda skin that sets the player's color when clicked.
+ */
 public class PurplePanda extends Actor
-{ 
-    private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("purplePanda.PNG");
+{
+    private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("purplePanda.PNG"); // Actor image.
 
-    public PurplePanda()
-    {
-        // Set the initial image
-        setImage(NORMAL_IMAGE);
-    }
+    /** Constructor - Sets purple panda image. */
+    public PurplePanda() { setImage(NORMAL_IMAGE); }
 
+    /** Act - Sets Levels.color to purple when clicked. */
     public void act()
     {
-        // 1. Handle the click action (same as before)
-        if (Greenfoot.mouseClicked(this))
-        {
+        if (Greenfoot.mouseClicked(this)) {
             Levels.color = 5;
-            return; 
+            return;
         }
-    }    
+    }
 }
