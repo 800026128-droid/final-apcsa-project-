@@ -1,31 +1,20 @@
+/**
+ * Bamboo - Represents an obstacle the player must avoid; reduces life if revealed.
+ */
 import greenfoot.*;
 
-/**
- * Bamboo - An obstacle in PandaQuest.
- * 
- * Represents bamboo shoots that the panda must avoid.
- * When revealed, bamboo causes the player to lose a life.
- * 
- * @author PandaQuest Team
- * @version 1.0
+/** 
+ * Obstacle bamboo, static in gameplay.
  */
 public class Bamboo extends Actor
 {
     /**
-     * Constructor for Bamboo.
+     * Constructor - Initializes bamboo obstacle.
      */
-    public Bamboo()
-    {
-        // Initialize bamboo
-    }
-    
+    public Bamboo() {}
+
     /**
-     * Act - do whatever the Bamboo wants to do.
-     * This method is called whenever the 'Act' or 'Run' button gets pressed.
-     * Bamboo is static and doesn't need to do anything per act cycle.
+     * Act - Does nothing per tick; bamboo is static.
      */
-    public void act()
-    {
-        // Bamboo is a static obstacle
-    }
+    public void act() {}
 }
