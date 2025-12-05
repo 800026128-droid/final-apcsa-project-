@@ -1,25 +1,25 @@
+/**
+ * AdvanceLevel - Handles advanced level start screen for the game, including setup and music.
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
 
 public class AdvanceLevel extends World
 {
     // Background music for the start screen
-    private static GreenfootSound startMusic = 
-        new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3");
+    private static GreenfootSound startMusic = new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3"); 
 
-    // Constructor for objects of class StartScreen.
+    /**
+     * Constructor - Initializes the advanced level start screen and its buttons.
+     */
     public AdvanceLevel()
-    {    
-        // Create a new world with 500x500 cells and a cell size of 1x1 pixels.
-        super(500, 500, 1); 
-        // The size should match the size of your PandaWorld for a smooth transition.
-
-        startMusic.setVolume(70); // 0–100, adjust if too loud/quiet
+    {
+        super(500, 500, 1); // Match PandaWorld for smooth transition.
+        startMusic.setVolume(70); // Set music volume.
         prepare();
     }
 
     /**
-     * Called automatically when this world becomes the active world
-     * (e.g. when you press Run, or when you Greenfoot.setWorld(new StartScreen()))
+     * Called when this world is activated (game starts or returns here).
      */
     public void started()
     {
@@ -27,8 +27,7 @@ public class AdvanceLevel extends World
     }
 
     /**
-     * Called when this world is no longer the active world
-     * (e.g. scenario stopped or you switch to PandaWorld)
+     * Called when switching to another world or stopping the scenario.
      */
     public void stopped()
     {
@@ -36,19 +35,18 @@ public class AdvanceLevel extends World
     }
 
     /**
-     * Prepare the world for the start of the program.
+     * Prepares screen, adding navigation and functional buttons.
      */
     private void prepare()
     {
-        // Add the Start Button to the center of the screen
         LevelButton levelButton = new LevelButton();
-        addObject(levelButton, getWidth()/2, 300); 
+        addObject(levelButton, getWidth()/2, 300);
         ReplayButton replayButton = new ReplayButton();
         addObject(replayButton, getWidth()/2, 400);
         ShopButton shopButton = new ShopButton();
         addObject(shopButton, getWidth()/2, 75);
         InformationButton informationButton = new InformationButton();
         addObject(informationButton, getWidth()/2-200, 450);
-        // Optional: title / instructions via another Actor
+        // Title/instructions button optional
     }
 }
