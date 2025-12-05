@@ -1,42 +1,40 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
- * Write a description of class Levels here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * Levels - Central class for level state, size, and panda color selection.
  */
+import greenfoot.*;
+
 public class Levels extends Actor
 {
-    /**
-     * Act - do whatever the Levels wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
-    public static int[] gridSizes = {8,10,12,14,16}; 
+    public static int[] gridSizes = {8,10,12,14,16};
     public static int currentLevel = 1;
     public static int PlayWidth = gridSizes[currentLevel-1];
     public static int PlayHeight = PlayWidth + 2;
     public static int advance = 0;
     public static int color = 7;
-    public Levels()
-    {
-        
-    }
-    
-    public void act()
-    {
-        // Add your action code here.
-    }
-    public static int getPLAY_WIDTH()
-    {
-        int PlayWidth = gridSizes[currentLevel-1];
+
+    /**
+     * Constructor - Initializes level actor.
+     */
+    public Levels() {}
+
+    /**
+     * Act - Placeholder for future level-related actions.
+     */
+    public void act() {}
+
+    /**
+     * Returns playable grid width for current level.
+     */
+    public static int getPLAY_WIDTH() {
+        int PlayWidth = gridSizes[currentLevel - 1];
         return PlayWidth;
-    
     }
-    public static int getWORLD_WIDTH()
-    {
+
+    /**
+     * Returns playable grid height for current level.
+     */
+    public static int getWORLD_WIDTH() {
         int PlayHeight = PlayWidth + 2;
         return PlayHeight;
     }
-    
 }
