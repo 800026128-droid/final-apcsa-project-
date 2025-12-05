@@ -1,24 +1,23 @@
+/**
+ * FinalScoreLabel - Displays the player's final score after completing the game.
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class FinalScoreLabel here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class FinalScoreLabel extends Actor
 {
     /**
-     * Act - do whatever the FinalScoreLabel wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
+     * Constructor - Initializes score label graphic for final score.
      */
     public FinalScoreLabel()
     {
-        GreenfootImage img = new GreenfootImage("Final Score: " + PandaWorld.savedScore, 30, Color.WHITE, null); // null for transparent background
+        GreenfootImage img = new GreenfootImage("Final Score: " + PandaWorld.savedScore, 30, Color.WHITE, null);
         img.setFont(new Font("Comic Sans MS", 30));
         setImage(img);
-        
     }
+
+    /**
+     * Act - Removes the label object if any click is detected.
+     */
     public void act()
     {
         if (Greenfoot.mouseClicked(null))
