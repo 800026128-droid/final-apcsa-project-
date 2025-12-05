@@ -1,21 +1,28 @@
+/**
+ * OrangePanda - Selectable panda skin; sets avatar color to orange when clicked.
+ */
 import greenfoot.*;
 
 public class OrangePanda extends Actor
-{ 
+{
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("orangePanda.PNG");
 
+    /**
+     * Constructor - Sets orange panda image.
+     */
     public OrangePanda()
     {
-        // Set the initial image
         setImage(NORMAL_IMAGE);
     }
 
+    /**
+     * Act - Sets the panda color to orange on click.
+     */
     public void act()
     {
-        // 1. Handle the click action (same as before)
         if (Greenfoot.mouseClicked(this))
         {
             Levels.color = 1;
         }
-    }    
+    }
 }
