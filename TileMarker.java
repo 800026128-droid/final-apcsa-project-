@@ -1,21 +1,17 @@
+/**
+ * TileMarker - Visual marker for a revealed tile showing adjacent bamboo count.
+ */
 import greenfoot.*;
 
 /**
- * TileMarker - Visual indicator for revealed tiles.
- * 
  * Displays the number of adjacent bamboo shoots for a revealed tile.
- * Used to give players information about nearby hazards.
- * 
- * @author PandaQuest Team
- * @version 1.0
  */
 public class TileMarker extends Actor
 {
     private int adjacentCount;
     
     /**
-     * Constructor for TileMarker.
-     * @param count Number of adjacent bamboo shoots
+     * Constructor - Creates a marker showing the given adjacent bamboo count.
      */
     public TileMarker(int count)
     {
@@ -25,7 +21,7 @@ public class TileMarker extends Actor
     }
     
     /**
-     * Update the visual appearance based on adjacent count.
+     * updateImage - Renders the tile marker graphic based on adjacentCount.
      */
     private void updateImage()
     {
@@ -42,7 +38,6 @@ public class TileMarker extends Actor
             img.drawString(String.valueOf(adjacentCount), 18, 35);
         }
         else {
-            // Empty tile
             img.setColor(new Color(200, 200, 200));
             img.fillRect(0, 0, 50, 50);
             img.setColor(Color.GRAY);
@@ -53,12 +48,15 @@ public class TileMarker extends Actor
     }
     
     /**
-     * Act - do whatever the TileMarker wants to do.
+     * Act - TileMarker has no per-frame behavior.
      */
     public void act()
     {
         // TileMarker is static
     }
+    /**
+     * getFlag - Simple demo: toggles marker color if Enter key pressed.
+     */
     public void getFlag()
     {
         if (Greenfoot.isKeyDown("enter"))
@@ -73,4 +71,3 @@ public class TileMarker extends Actor
         }
     }
 }
-
