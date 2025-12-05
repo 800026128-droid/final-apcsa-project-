@@ -1,26 +1,19 @@
+/**
+ * GameComplete - Shows the victory screen with score and replay option.
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class GameComplete here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class GameComplete extends World
 {
-
     /**
-     * Constructor for objects of class GameComplete.
-     * 
+     * Constructor - Initializes the win screen and plays victory music.
      */
     public GameComplete()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+    {
         super(500, 500, 1);
         addObject(new FinalScoreLabel(), getWidth()/2, 139);
         Greenfoot.playSound("victoryMusic.mp3");
         addObject(new ReplayButton(), getWidth()/2, 212);
         setPaintOrder(ReplayButton.class, FinalScoreLabel.class);
     }
-    
 }
