@@ -1,18 +1,25 @@
+/**
+ * YellowPanda - Selectable panda skin; sets avatar color to yellow when clicked.
+ */
 import greenfoot.*;
 
 public class YellowPanda extends Actor
 { 
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("yellowPanda.PNG");
 
+    /**
+     * Constructor - Sets yellow panda image.
+     */
     public YellowPanda()
     {
-        // Set the initial image
         setImage(NORMAL_IMAGE);
     }
 
+    /**
+     * Act - Sets the panda color to yellow on click.
+     */
     public void act()
     {
-        // 1. Handle the click action (same as before)
         if (Greenfoot.mouseClicked(this))
         {
             Levels.color = 2;
