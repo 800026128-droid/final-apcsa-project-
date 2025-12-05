@@ -1,51 +1,36 @@
 import greenfoot.*;
 
+/**
+ * ReplayButton - Allows player to retry the level or return to start, toggles hover image.
+ */
 public class ReplayButton extends Actor
 {
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("smallerReplaybutton.png");
     private static final GreenfootImage HOVER_IMAGE = new GreenfootImage("smallerReplaybutton.png");
-    
-    public ReplayButton()
-    {
-        // Set the initial image
-        setImage(NORMAL_IMAGE);
-    }
 
+    /** Constructor - Sets default replay button image. */
+    public ReplayButton() { setImage(NORMAL_IMAGE); }
+
+    /** Act - Restarts the game on click and updates hover appearance; special handling on GameComplete. */
     public void act()
     {
-        // 1. Handle the click action (same as before)
-        if (Greenfoot.mouseClicked(this) && !(getWorld() instanceof GameComplete))
-        {
-            if (Levels.advance == 1)
-            {
-                Levels.currentLevel -= 1;
-            }
+        if (Greenfoot.mouseClicked(this) && !(getWorld() instanceof GameComplete)) {
+            if (Levels.advance == 1) { Levels.currentLevel -= 1; }
             Greenfoot.setWorld(new PandaWorld());
-            return; 
+            return;
         }
 
-        // 2. Handle the hover action: Switch images
-        if (Greenfoot.mouseMoved(this))
-        {
-            // If the mouse is over the button, set the pre-faded image
-            if (getImage() != HOVER_IMAGE) {
-                setImage(HOVER_IMAGE);
-            }
+        if (Greenfoot.mouseMoved(this)) {
+            if (getImage() != HOVER_IMAGE) setImage(HOVER_IMAGE);
+        } else {
+            if (getImage() != NORMAL_IMAGE) setImage(NORMAL_IMAGE);
         }
-        else
-        {
-            // If the mouse is NOT over the button, set the normal image
-            if (getImage() != NORMAL_IMAGE) {
-                setImage(NORMAL_IMAGE);
-            }
-        }
-        if (getWorld() instanceof GameComplete)
-        {
+
+        if (getWorld() instanceof GameComplete) {
             Levels.currentLevel = 1;
-            if (Greenfoot.mouseClicked(this))
-            {
+            if (Greenfoot.mouseClicked(this)) {
                 Greenfoot.setWorld(new StartScreen());
             }
         }
-    }    
+    }
 }
