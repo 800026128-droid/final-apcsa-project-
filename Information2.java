@@ -1,25 +1,24 @@
+/**
+ * Information2 - Displays additional info page with navigation and music controls.
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
 
 public class Information2 extends World
 {
-    // Background music for the start screen
-    private GreenfootSound startMusic = 
-        new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3");
+    private GreenfootSound startMusic = new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3");
 
-    // Constructor for objects of class StartScreen.
+    /**
+     * Constructor - Initializes additional info screen.
+     */
     public Information2()
-    {    
-        // Create a new world with 500x500 cells and a cell size of 1x1 pixels.
-        super(500, 500, 1); 
-        // The size should match the size of your PandaWorld for a smooth transition.
-
-        startMusic.setVolume(70); // 0–100, adjust if too loud/quiet
+    {
+        super(500, 500, 1);
+        startMusic.setVolume(70);
         prepare();
     }
 
     /**
-     * Called automatically when this world becomes the active world
-     * (e.g. when you press Run, or when you Greenfoot.setWorld(new StartScreen()))
+     * Called when this info page is activated; plays music.
      */
     public void started()
     {
@@ -27,8 +26,7 @@ public class Information2 extends World
     }
 
     /**
-     * Called when this world is no longer the active world
-     * (e.g. scenario stopped or you switch to PandaWorld)
+     * Called when leaving this info page; stops music.
      */
     public void stopped()
     {
@@ -36,15 +34,13 @@ public class Information2 extends World
     }
 
     /**
-     * Prepare the world for the start of the program.
+     * Adds navigation buttons to this info page.
      */
     private void prepare()
     {
-        // Add the Start Button to the center of the screen
         HomeButton homeButton = new HomeButton();
         addObject(homeButton, getWidth()/2, 450);
         leftArrowButton lA = new leftArrowButton();
         addObject(lA, getWidth()/2, 50);
-        // Optional: title / instructions via another Actor
     }
 }
