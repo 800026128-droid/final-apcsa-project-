@@ -1,22 +1,29 @@
+/**
+ * GreenPanda - Selectable panda skin that sets the player's color when clicked.
+ */
 import greenfoot.*;
 
 public class GreenPanda extends Actor
-{ 
+{
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("greenPanda.PNG");
 
+    /**
+     * Constructor - Sets green panda image.
+     */
     public GreenPanda()
     {
-        // Set the initial image
         setImage(NORMAL_IMAGE);
     }
 
+    /**
+     * Act - Changes the panda color on click.
+     */
     public void act()
     {
-        // 1. Handle the click action (same as before)
         if (Greenfoot.mouseClicked(this))
         {
             Levels.color = 3;
-            return; 
+            return;
         }
-    }    
+    }
 }
