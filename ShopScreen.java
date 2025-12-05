@@ -1,25 +1,25 @@
+/**
+ * ShopScreen - Presents purchasable panda skins and navigation for the shop.
+ */
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
 
 public class ShopScreen extends World
 {
-    // Background music for the start screen
-    private GreenfootSound startMusic = 
-        new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3");
+    // Background music for the shop screen
+    private GreenfootSound startMusic = new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3");
 
-    // Constructor for objects of class StartScreen.
+    /**
+     * Constructor - Initializes shop world, music and UI.
+     */
     public ShopScreen()
     {    
-        // Create a new world with 500x500 cells and a cell size of 1x1 pixels.
         super(500, 500, 1); 
-        // The size should match the size of your PandaWorld for a smooth transition.
-
-        startMusic.setVolume(70); // 0–100, adjust if too loud/quiet
+        startMusic.setVolume(70);
         prepare();
     }
 
     /**
-     * Called automatically when this world becomes the active world
-     * (e.g. when you press Run, or when you Greenfoot.setWorld(new StartScreen()))
+     * started - Play looping music when shop becomes active.
      */
     public void started()
     {
@@ -27,8 +27,7 @@ public class ShopScreen extends World
     }
 
     /**
-     * Called when this world is no longer the active world
-     * (e.g. scenario stopped or you switch to PandaWorld)
+     * stopped - Stop music when leaving the shop.
      */
     public void stopped()
     {
@@ -36,11 +35,10 @@ public class ShopScreen extends World
     }
 
     /**
-     * Prepare the world for the start of the program.
+     * prepare - Adds navigation and panda skin options to the shop UI.
      */
     private void prepare()
     {
-        // Add the Start Button to the center of the screen
         HomeButton homeButton = new HomeButton();
         addObject(homeButton, getWidth()/2, 75);
         RedPanda redPanda = new RedPanda();
@@ -59,6 +57,5 @@ public class ShopScreen extends World
         addObject(brownPanda, getWidth()/2+50, 400);
         BlackPanda blackPanda = new BlackPanda();
         addObject(blackPanda, getWidth()/2+150, 400);
-        // Optional: title / instructions via another Actor
     }
 }
