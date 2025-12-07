@@ -1,7 +1,8 @@
-import greenfoot.*;
 /**
  * PandaWorld - The main game world for PandaQuest; manages grid, tiles, actors, and game rules.
  */
+import greenfoot.*;
+
 public class PandaWorld extends World
 {
     private GreenfootSound levelUpSound = new GreenfootSound("PowerUpSound.mp3"); // Sound played on level up.
