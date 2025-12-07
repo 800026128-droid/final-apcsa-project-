@@ -1,7 +1,7 @@
 /**
  * StartScreen - Main menu screen with options to start game, open shop, or view info.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
+import greenfoot.*;
 
 public class StartScreen extends World
 {
