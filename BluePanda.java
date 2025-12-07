@@ -1,12 +1,13 @@
 /**
- * BluePanda - Selectable panda skin that sets the player's color when clicked.
+ * BluePanda - Selectable panda skin; sets avatar color to blue when clicked.
  */
 import greenfoot.*;
 
 public class BluePanda extends Actor
-{
+{ 
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("bluePanda.PNG");
-
+    private GreenfootSound clickSound = new GreenfootSound("SelectSound.mp3");
+    
     /**
      * Constructor - Sets blue panda image.
      */
@@ -23,7 +24,8 @@ public class BluePanda extends Actor
         if (Greenfoot.mouseClicked(this))
         {
             Levels.color = 4;
-            return;
+            clickSound.play();
+            return; 
         }
-    }
+    }    
 }
