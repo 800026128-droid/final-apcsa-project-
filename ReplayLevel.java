@@ -1,8 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
-
 /**
  * ReplayLevel - Screen shown when player can replay a level; includes navigation and music.
  */
+import greenfoot.*;
+
 public class ReplayLevel extends World
 {
     private GreenfootSound startMusic = new GreenfootSound("Map (Night) - Tomodachi Life OST.mp3"); // Music for this screen.
