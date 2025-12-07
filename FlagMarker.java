@@ -1,7 +1,7 @@
 /**
  * FlagMarker - Marks special tiles on the game map, e.g., finish or checkpoint.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 public class FlagMarker extends Actor
 {
