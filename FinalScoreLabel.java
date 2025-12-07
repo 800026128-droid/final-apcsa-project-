@@ -1,7 +1,7 @@
 /**
  * FinalScoreLabel - Displays the player's final score after completing the game.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 public class FinalScoreLabel extends Actor
 {
