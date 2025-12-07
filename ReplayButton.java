@@ -1,8 +1,8 @@
-import greenfoot.*;
-
 /**
  * ReplayButton - Allows player to retry the level or return to start, toggles hover image.
  */
+import greenfoot.*;
+
 public class ReplayButton extends Actor
 {
     private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("smallerReplaybutton.png");
