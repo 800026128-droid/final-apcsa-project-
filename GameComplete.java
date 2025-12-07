@@ -1,7 +1,7 @@
 /**
  * GameComplete - Shows the victory screen with score and replay option.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 
 public class GameComplete extends World
 {
