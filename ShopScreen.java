@@ -1,7 +1,7 @@
 /**
  * ShopScreen - Presents purchasable panda skins and navigation for the shop.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
+import greenfoot.*;
 
 public class ShopScreen extends World
 {
