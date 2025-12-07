@@ -1,20 +1,30 @@
+/**
+ * RedPanda - Selectable panda skin; sets avatar color to red when clicked.
+ */
 import greenfoot.*;
 
-/**
- * PurplePanda - Selectable panda skin that sets the player's color when clicked.
- */
-public class PurplePanda extends Actor
-{
-    private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("purplePanda.PNG"); // Actor image.
+public class RedPanda extends Actor
+{ 
+    private static final GreenfootImage NORMAL_IMAGE = new GreenfootImage("redPanda.png");
+    private GreenfootSound clickSound = new GreenfootSound("SelectSound.mp3");
+    
+    /**
+     * Constructor - Sets red panda image.
+     */
+    public RedPanda()
+    {
+        setImage(NORMAL_IMAGE);
+    }
 
-    /** Constructor - Sets purple panda image. */
-    public PurplePanda() { setImage(NORMAL_IMAGE); }
-
-    /** Act - Sets Levels.color to purple when clicked. */
+    /**
+     * Act - Sets the panda color to red on click.
+     */
     public void act()
     {
-        if (Greenfoot.mouseClicked(this)) {
-            Levels.color = 5;
+        if (Greenfoot.mouseClicked(this))
+        {
+            Levels.color = 0;
+            clickSound.play();
             return;
         }
     }
