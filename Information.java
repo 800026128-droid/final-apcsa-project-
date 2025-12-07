@@ -1,7 +1,7 @@
 /**
  * Information - Displays information screen with navigation options and music.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
+import greenfoot.*;
 
 public class Information extends World
 {
