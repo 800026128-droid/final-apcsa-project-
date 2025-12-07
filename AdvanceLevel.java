@@ -1,7 +1,7 @@
 /**
  * AdvanceLevel - Handles advanced level start screen for the game, including setup and music.
  */
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and so forth)
+import greenfoot.*;
 
 public class AdvanceLevel extends World
 {
